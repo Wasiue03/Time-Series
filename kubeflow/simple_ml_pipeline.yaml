@@ -1,0 +1,65 @@
+# PIPELINE DEFINITION
+# Name: simple-ml-pipeline
+# Description: A simple ML pipeline example
+components:
+  comp-train-and-evaluate-iris:
+    executorLabel: exec-train-and-evaluate-iris
+    outputDefinitions:
+      artifacts:
+        model_path:
+          artifactType:
+            schemaTitle: system.Model
+            schemaVersion: 0.0.1
+deploymentSpec:
+  executors:
+    exec-train-and-evaluate-iris:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - train_and_evaluate_iris
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.8.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef train_and_evaluate_iris(model_path: Output[Model]):\n    # Load\
+          \ Iris dataset\n    iris = load_iris()\n    X = iris.data\n    y = iris.target\n\
+          \n    # Split dataset into train and test sets\n    X_train, X_test, y_train,\
+          \ y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n  \
+          \  # Train model\n    model = RandomForestClassifier(n_estimators=100, random_state=42)\n\
+          \    model.fit(X_train, y_train)\n\n    # Evaluate model\n    y_pred = model.predict(X_test)\n\
+          \    accuracy = accuracy_score(y_test, y_pred)\n    print(f'Accuracy: {accuracy:.2f}')\n\
+          \n    # Save model\n    joblib.dump(model, model_path.path + '/iris_model.pkl')\n\
+          \n"
+        image: python:3.12.0
+pipelineInfo:
+  description: A simple ML pipeline example
+  name: simple-ml-pipeline
+root:
+  dag:
+    tasks:
+      train-and-evaluate-iris:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-train-and-evaluate-iris
+        taskInfo:
+          name: train-and-evaluate-iris
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.8.0

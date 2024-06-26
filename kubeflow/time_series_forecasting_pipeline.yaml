@@ -1,0 +1,70 @@
+# PIPELINE DEFINITION
+# Name: time-series-forecasting-pipeline
+# Description: A pipeline for time series forecasting using ARIMA or SARIMA models.
+# Inputs:
+#    data_path: str [Default: 'shampoo_sales.csv']
+#    model_type: str [Default: 'ARIMA']
+#    seasonal_period: int [Default: 12]
+
+components:
+  comp-time-series-forecast-component:
+    implementation:
+      container:
+        image: python:3.8
+        command: ["python", "/app/component.py"]
+    inputs:
+      parameters:
+        - name: data_path
+          type: String
+        - name: model_type
+          type: String
+        - name: seasonal_period
+          type: Integer
+    outputs:
+      parameters:
+        - name: Output
+          type: Double
+
+deploymentSpec:
+  executors:
+    exec-time-series-forecast-component:
+      container:
+        image: python:3.12.0
+        command:
+          - sh
+          - -c
+          - |
+            python3 -m pip install pandas==1.3.5 pmdarima statsmodels
+            python3 /app/component.py --executor_input '{{inputs.parameters}}' --function_to_execute time_series_forecast_component
+
+root:
+  tasks:
+    - name: time-series-forecast-component
+      template: comp-time-series-forecast-component
+      inputs:
+        parameters:
+          - name: data_path
+            value: shampoo_sales.csv
+          - name: model_type
+            value: ARIMA
+          - name: seasonal_period
+            value: 12
+
+inputDefinitions:
+  parameters:
+    - name: data_path
+      defaultValue: shampoo_sales.csv
+      type: String
+    - name: model_type
+      defaultValue: ARIMA
+      type: String
+    - name: seasonal_period
+      defaultValue: 12
+      type: Integer
+
+pipelineInfo:
+  name: time-series-forecasting-pipeline
+  description: A pipeline for time series forecasting using ARIMA or SARIMA models.
+
+sdkVersion: v1.8.5
+schemaVersion: 1.2
