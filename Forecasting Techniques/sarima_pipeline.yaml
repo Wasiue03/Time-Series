@@ -1,0 +1,83 @@
+# PIPELINE DEFINITION
+# Name: sarima-forecasting-pipeline
+# Description: Pipeline to perform SARIMA forecasting
+# Inputs:
+#    data_path: str
+components:
+  comp-sarima-forecast:
+    executorLabel: exec-sarima-forecast
+    inputDefinitions:
+      parameters:
+        data:
+          parameterType: STRING
+    outputDefinitions:
+      parameters:
+        Output:
+          parameterType: NUMBER_DOUBLE
+deploymentSpec:
+  executors:
+    exec-sarima-forecast:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - sarima_forecast
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.8.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"'  &&\
+          \  python3 -m pip install --quiet --no-warn-script-location 'statsmodels'\
+          \ 'pandas' 'matplotlib' 'scikit-learn' && \"$0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef sarima_forecast(data: str) -> Output[float]:\n    # Load data\n\
+          \    df = pd.read_csv('data/metrics.csv', parse_dates=['time_stamp'])\n\
+          \    df.set_index('time_stamp', inplace=True)\n\n    # Perform SARIMA forecasting\n\
+          \    model = SARIMAX(df['value'], order=(1, 1, 1), seasonal_order=(1, 1,\
+          \ 0, 24))\n    sarima_fit = model.fit(disp=False)\n    forecast = sarima_fit.forecast(steps=24)\
+          \  # Adjust steps as needed\n\n    # Calculate RMSE\n    actual = df['value'][-24:].values\
+          \  # Assuming forecasting last 24 hours\n    rmse = np.sqrt(mean_squared_error(actual,\
+          \ forecast))\n\n    # Plotting (optional)\n    plt.figure(figsize=(12, 6))\n\
+          \    plt.plot(df.index[-24:], actual, label='Actual')\n    plt.plot(df.index[-24:],\
+          \ forecast, label='Forecast')\n    plt.title('SARIMA Forecast')\n    plt.xlabel('Time')\n\
+          \    plt.ylabel('Value')\n    plt.legend()\n    plt.savefig('/mnt/sarima_forecast_plot.png')\
+          \  # Save plot to file\n\n    # Output RMSE as a float\n    return rmse\n\
+          \n"
+        image: python:3.12.0
+pipelineInfo:
+  description: Pipeline to perform SARIMA forecasting
+  name: sarima-forecasting-pipeline
+root:
+  dag:
+    tasks:
+      sarima-forecast:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-sarima-forecast
+        inputs:
+          parameters:
+            data:
+              runtimeValue:
+                constant: data/metrics.csv
+        taskInfo:
+          name: sarima-forecast
+  inputDefinitions:
+    parameters:
+      data_path:
+        parameterType: STRING
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.8.0

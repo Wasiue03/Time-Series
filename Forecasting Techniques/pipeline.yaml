@@ -1,0 +1,139 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: sarima-pipeline-
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2024-07-11T05:21:48.410459',
+    pipelines.kubeflow.org/pipeline_spec: '{"description": "A pipeline to run SARIMA
+      model functions.", "name": "SARIMA Pipeline"}'}
+  labels: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22}
+spec:
+  entrypoint: sarima-pipeline
+  templates:
+  - name: difference-series
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/difference_series:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: load-data
+    container: {image: 'wasiue/load_data:latest'}
+    outputs:
+      parameters:
+      - name: load-data-data
+        valueFrom: {path: /data/metrics.csv}
+      artifacts:
+      - {name: load-data-data, path: /data/metrics.csv}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: main-execution
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/main:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: plot-acf-and-pacf
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/plot_acf_pacf:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: sarima-model-forecast
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/sarima_model:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: sarima-pipeline
+    dag:
+      tasks:
+      - name: difference-series
+        template: difference-series
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - {name: load-data, template: load-data}
+      - name: main-execution
+        template: main-execution
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: plot-acf-and-pacf
+        template: plot-acf-and-pacf
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: sarima-model-forecast
+        template: sarima-model-forecast
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: seasonality
+        template: seasonality
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: test-stationarity
+        template: test-stationarity
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+  - name: seasonality
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/seasonal_decomposition:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: test-stationarity
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      image: wasiue/test_stationarity:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  arguments:
+    parameters: []
+  serviceAccountName: pipeline-runner
