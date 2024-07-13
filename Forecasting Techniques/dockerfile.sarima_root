@@ -4,7 +4,7 @@ FROM python:3.12.0
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the Python script and dependencies
+# Copy the Python script into the container
 COPY sarima.py /app/sarima.py
 
 # Create a directory for your data
@@ -14,7 +14,7 @@ RUN mkdir /app/data
 COPY data/metrics.csv /app/data/metrics.csv
 
 # Install pandas, numpy, matplotlib, and any other dependencies required
-RUN pip install  pandas statsmodels matplotlib scikit-learn
+RUN pip install --no-cache-dir pandas statsmodels matplotlib scikit-learn
 
-# Specify the command to run your function
-CMD ["python", "sarima.py", "main"]
+# Specify the command to run your script
+CMD ["python", "sarima.py"]

@@ -15,5 +15,4 @@ COPY data/metrics.csv /app/data/metrics.csv
 # Install pandas, numpy, statsmodels, and any other dependencies required
 RUN pip install pandas numpy statsmodels matplotlib scikit-learn
 
-# Specify the command to run your function
 CMD ["python", "sarima.py", "difference_series"]

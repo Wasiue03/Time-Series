@@ -76,12 +76,13 @@ def load_data(file_path):
 
 def seasonal_decomposition(df):
     """
-    Function to perform seasonal decomposition and plot results.
+    Function to perform seasonal decomposition and save plot to file.
     """
     result_stl = seasonal_decompose(df, model='additive')
     fig = result_stl.plot()
     plt.title('Seasonal Decomposition')
-    plt.show()
+    plt.savefig('/app/data/seasonal_decomposition.png')  # Save plot to file
+    plt.close()  # Close plot to prevent showing in container output
     return result_stl
 
 def test_stationarity(df):
@@ -94,17 +95,23 @@ def test_stationarity(df):
     for key, value in result[4].items():
         print(f'Critical Value {key}: {value}')
 
+
 def difference_series(df, order=1):
     """
-    Function to perform differencing on the series.
+    Function to perform differencing on the series and save plot to file.
     """
     for i in range(order):
         df = df.diff().dropna()
+    plt.figure(figsize=(12, 6))
+    plt.plot(df)
+    plt.title('Differenced Series')
+    plt.savefig('/app/data/difference_series.png')  # Save plot to file
+    plt.close()  # Close plot to prevent showing in container output
     return df
 
 def plot_acf_pacf(series):
     """
-    Function to plot ACF and PACF.
+    Function to plot ACF and PACF and save plots to file.
     """
     df = load_data('data/metrics.csv')
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
@@ -113,7 +120,8 @@ def plot_acf_pacf(series):
     plot_acf(df.diff().dropna(), lags=48, ax=axes[1, 0])
     plot_pacf(df.diff().dropna(), lags=30, ax=axes[1, 1])
     plt.tight_layout()
-    plt.show()
+    plt.savefig('/app/data/acf_pacf.png')  # Save plot to file
+    plt.close() 
 
 def sarima_model(train, test):
     """
