@@ -74,21 +74,23 @@ def load_data(file_path):
     df = df.groupby('time_stamp')['value'].sum()
     return df
 
-# def seasonal_decomposition(df,model='additive'):
-#     """
-#     Function to perform seasonal decomposition and save plot to file.
-#     """
-#     result_stl = seasonal_decompose(df, model='additive')
-#     fig = result_stl.plot()
-#     plt.title('Seasonal Decomposition')
-#     plt.savefig('/app/data/seasonal_decomposition.png')  # Save plot to file
-#     plt.close()  # Close plot to prevent showing in container output
-#     return result_stl
+def seasonal_decomposition(model='additive'):
+    """
+    Function to perform seasonal decomposition and save plot to file.
+    """
+    df = load_data('data/metrics.csv')
+    result_stl = seasonal_decompose(df, model='additive')
+    fig = result_stl.plot()
+    plt.title('Seasonal Decomposition')
+    plt.savefig('/app/data/seasonal_decomposition.png')  # Save plot to file
+    plt.close()  # Close plot to prevent showing in container output
+    return result_stl
 
-def test_stationarity(df):
+def test_stationarity(autolag='AIC'):
     """
     Function to test stationarity using Augmented Dickey-Fuller test.
     """
+    df = load_data('data/metrics.csv')
     result = adfuller(df, autolag='AIC')
     print(f'ADF Statistic: {result[0]}')
     print(f'p-value: {result[1]}')
@@ -96,10 +98,11 @@ def test_stationarity(df):
         print(f'Critical Value {key}: {value}')
 
 
-def difference_series(df, order=1):
+def difference_series(order=1):
     """
     Function to perform differencing on the series and save plot to file.
     """
+    df = load_data('data/metrics.csv')
     for i in range(order):
         df = df.diff().dropna()
     plt.figure(figsize=(12, 6))
@@ -109,24 +112,28 @@ def difference_series(df, order=1):
     plt.close()  # Close plot to prevent showing in container output
     return df
 
-def plot_acf_pacf(series):
+def plot_acf_pacf():
     """
     Function to plot ACF and PACF and save plots to file.
     """
-    df = load_data('data/metrics.csv')
+    series1 = load_data('data/metrics.csv')
+    series2 = series1.diff()
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
-    plot_acf(series, lags=48, ax=axes[0, 0])
-    plot_pacf(series, lags=30, ax=axes[0, 1])
-    plot_acf(df.diff().dropna(), lags=48, ax=axes[1, 0])
-    plot_pacf(df.diff().dropna(), lags=30, ax=axes[1, 1])
+    plot_acf(series1, lags=48, ax=axes[0, 0])
+    plot_pacf(series1, lags=30, ax=axes[0, 1])
+    plot_acf(series2.dropna(), lags=48, ax=axes[1, 0])
+    plot_pacf(series2.dropna(), lags=30, ax=axes[1, 1])
     plt.tight_layout()
     plt.savefig('/app/data/acf_pacf.png')  # Save plot to file
     plt.close() 
 
-def sarima_model(train, test):
+def sarima_model():
     """
     Function to fit SARIMA model and forecast.
     """
+    df = load_data('data/metrics.csv')
+    train = df.iloc[:2196]
+    test = df.iloc[2196:]
     model = SARIMAX(train, order=(3, 1, 0), seasonal_order=(3, 1, 0, 7))
     sr_fit = model.fit()
     sr_fc = sr_fit.forecast(steps=len(test))
@@ -157,27 +164,26 @@ def main():
     plt.show()
 
     # Perform seasonal decomposition
-    # result_stl = seasonal_decomposition(df)
+    result_stl = seasonal_decomposition()
     
     # Detrend data
-    # dt_df = df - result_stl.trend
-    # dt_df.dropna(inplace=True)
+    dt_df = df - result_stl.trend
+    dt_df.dropna(inplace=True)
     
     # Test stationarity
-    test_stationarity(df)
+    test_stationarity()
     
     # Perform differencing
-    df_diff = difference_series(df, order=1)
+    df_diff = difference_series(order=1)
     
     # Plot ACF and PACF
-    plot_acf_pacf(df)
+    plot_acf_pacf()
     
     # Split data into train and test sets
-    train = df.iloc[:2196]
-    test = df.iloc[2196:]
+    
     
     # Perform SARIMA modeling and forecasting
-    sarima_model(train, test)
+    sarima_model()
     print("Main run successfull")
 if __name__ == "__main__":
     main()

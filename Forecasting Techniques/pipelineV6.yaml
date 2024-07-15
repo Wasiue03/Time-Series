@@ -1,0 +1,191 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: sarima-pipeline-
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2024-07-14T01:23:25.427335',
+    pipelines.kubeflow.org/pipeline_spec: '{"description": "A pipeline to run SARIMA
+      model functions.", "inputs": [{"name": "data_path", "type": "String"}], "name":
+      "SARIMA Pipeline"}'}
+  labels: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22}
+spec:
+  entrypoint: sarima-pipeline
+  templates:
+  - name: adf-test
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      command: [python, sarima.py, test_stationarity]
+      image: wasiue/test_stationarity:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: difference-series
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      command: [python, sarima.py, difference_series]
+      image: wasiue/difference_series:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: load-data
+    container:
+      command: [python, sarima.py, load_data]
+      image: wasiue/load_data:latest
+    outputs:
+      parameters:
+      - name: load-data-data
+        valueFrom: {path: /app/data/metrics.csv}
+      artifacts:
+      - {name: load-data-data, path: /app/data/metrics.csv}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: main-execution
+    container:
+      command: [python, sarima.py, main]
+      image: wasiue/main:latest
+    outputs:
+      artifacts:
+      - {name: main-execution-data, path: /app/data/metrics.csv}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: plot-acf-and-pacf
+    container:
+      args: [--data, '{{inputs.parameters.load-data-data}}']
+      command: [python, sarima.py, plot_acf_pacf]
+      image: wasiue/plot_acf_pacf:latest
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+  - name: sarima-model
+    container:
+      args: [--train, '{{inputs.parameters.load-data-data}}', --test, '{{inputs.parameters.load-data-data}}']
+      command:
+      - sh
+      - -c
+      - (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location
+        'pandas' 'numpy' 'matplotlib' 'statsmodels' 'scikit-learn' || PIP_DISABLE_PIP_VERSION_CHECK=1
+        python3 -m pip install --quiet --no-warn-script-location 'pandas' 'numpy'
+        'matplotlib' 'statsmodels' 'scikit-learn' --user) && "$0" "$@"
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def sarima_model(train, test):
+            """
+            Function to fit SARIMA model and forecast.
+            """
+            model = SARIMAX(train, order=(3, 1, 0), seasonal_order=(3, 1, 0, 7))
+            sr_fit = model.fit()
+            sr_fc = sr_fit.forecast(steps=len(test))
+            sr_rmse = np.sqrt(mean_squared_error(test, sr_fc))
+
+            plt.figure(figsize=(16, 4))
+            plt.plot(test, label="Actual")
+            plt.plot(sr_fc, label="Predicted")
+            plt.title('SARIMA Forecast')
+            plt.ylabel('% CPU Usage')
+            plt.legend()
+            plt.savefig('/app/data/sarima_forecast.png')  # Save plot to file
+            plt.close()
+
+            print(f"SARIMAX RMSE: {sr_rmse}")
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Sarima model', description='Function to fit SARIMA model and forecast.')
+        _parser.add_argument("--train", dest="train", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("--test", dest="test", type=str, required=True, default=argparse.SUPPRESS)
+        _parsed_args = vars(_parser.parse_args())
+
+        _outputs = sarima_model(**_parsed_args)
+      image: python:3.12.0
+    inputs:
+      parameters:
+      - {name: load-data-data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"description": "Function
+          to fit SARIMA model and forecast.", "implementation": {"container": {"args":
+          ["--train", {"inputValue": "train"}, "--test", {"inputValue": "test"}],
+          "command": ["sh", "-c", "(PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip
+          install --quiet --no-warn-script-location ''pandas'' ''numpy'' ''matplotlib''
+          ''statsmodels'' ''scikit-learn'' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3
+          -m pip install --quiet --no-warn-script-location ''pandas'' ''numpy'' ''matplotlib''
+          ''statsmodels'' ''scikit-learn'' --user) && \"$0\" \"$@\"", "sh", "-ec",
+          "program_path=$(mktemp)\nprintf \"%s\" \"$0\" > \"$program_path\"\npython3
+          -u \"$program_path\" \"$@\"\n", "def sarima_model(train, test):\n    \"\"\"\n    Function
+          to fit SARIMA model and forecast.\n    \"\"\"\n    model = SARIMAX(train,
+          order=(3, 1, 0), seasonal_order=(3, 1, 0, 7))\n    sr_fit = model.fit()\n    sr_fc
+          = sr_fit.forecast(steps=len(test))\n    sr_rmse = np.sqrt(mean_squared_error(test,
+          sr_fc))\n\n    plt.figure(figsize=(16, 4))\n    plt.plot(test, label=\"Actual\")\n    plt.plot(sr_fc,
+          label=\"Predicted\")\n    plt.title(''SARIMA Forecast'')\n    plt.ylabel(''%
+          CPU Usage'')\n    plt.legend()\n    plt.savefig(''/app/data/sarima_forecast.png'')  #
+          Save plot to file\n    plt.close()\n\n    print(f\"SARIMAX RMSE: {sr_rmse}\")\n\nimport
+          argparse\n_parser = argparse.ArgumentParser(prog=''Sarima model'', description=''Function
+          to fit SARIMA model and forecast.'')\n_parser.add_argument(\"--train\",
+          dest=\"train\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"--test\",
+          dest=\"test\", type=str, required=True, default=argparse.SUPPRESS)\n_parsed_args
+          = vars(_parser.parse_args())\n\n_outputs = sarima_model(**_parsed_args)\n"],
+          "image": "python:3.12.0"}}, "inputs": [{"name": "train"}, {"name": "test"}],
+          "name": "Sarima model"}', pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"test":
+          "{{inputs.parameters.load-data-data}}", "train": "{{inputs.parameters.load-data-data}}"}'}
+  - name: sarima-pipeline
+    dag:
+      tasks:
+      - name: adf-test
+        template: adf-test
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: difference-series
+        template: difference-series
+        dependencies: [adf-test, load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: load-data
+        template: load-data
+        dependencies: [main-execution]
+      - {name: main-execution, template: main-execution}
+      - name: plot-acf-and-pacf
+        template: plot-acf-and-pacf
+        dependencies: [difference-series, load-data]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+      - name: sarima-model
+        template: sarima-model
+        dependencies: [load-data, plot-acf-and-pacf]
+        arguments:
+          parameters:
+          - {name: load-data-data, value: '{{tasks.load-data.outputs.parameters.load-data-data}}'}
+  arguments:
+    parameters:
+    - {name: data_path}
+  serviceAccountName: pipeline-runner

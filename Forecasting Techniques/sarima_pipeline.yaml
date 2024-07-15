@@ -1,83 +1,935 @@
-# PIPELINE DEFINITION
-# Name: sarima-forecasting-pipeline
-# Description: Pipeline to perform SARIMA forecasting
-# Inputs:
-#    data_path: str
-components:
-  comp-sarima-forecast:
-    executorLabel: exec-sarima-forecast
-    inputDefinitions:
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: sarima-pipeline-
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22, pipelines.kubeflow.org/pipeline_compilation_time: '2024-07-13T22:25:06.923095',
+    pipelines.kubeflow.org/pipeline_spec: '{"description": "A pipeline to train and
+      predict with SARIMA model", "name": "SARIMA Pipeline"}'}
+  labels: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.22}
+spec:
+  entrypoint: sarima-pipeline
+  templates:
+  - name: load-data
+    container:
+      args: ['----output-paths', /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def load_data():
+            import pandas as pd
+            df = pd.read_csv('data/metrics.csv')
+            df = df[['time_stamp', 'value']]
+            df['time_stamp'] = pd.to_datetime(df['time_stamp'])
+            df = df.groupby('time_stamp')['value'].sum()
+            df.to_csv('/mnt/data/df.csv')
+            return '/mnt/data/df.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Load data', description='')
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = load_data(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    outputs:
       parameters:
-        data:
-          parameterType: STRING
-    outputDefinitions:
+      - name: load-data-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: load-data-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["----output-paths", {"outputPath": "Output"}], "command": ["sh",
+          "-ec", "program_path=$(mktemp)\nprintf \"%s\" \"$0\" > \"$program_path\"\npython3
+          -u \"$program_path\" \"$@\"\n", "def load_data():\n    import pandas as
+          pd\n    df = pd.read_csv(''data/metrics.csv'')\n    df = df[[''time_stamp'',
+          ''value'']]\n    df[''time_stamp''] = pd.to_datetime(df[''time_stamp''])\n    df
+          = df.groupby(''time_stamp'')[''value''].sum()\n    df.to_csv(''/mnt/data/df.csv'')\n    return
+          ''/mnt/data/df.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Load
+          data'', description='''')\n_parser.add_argument(\"----output-paths\", dest=\"_output_paths\",
+          type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = load_data(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "name": "Load data", "outputs": [{"name": "Output",
+          "type": "String"}]}', pipelines.kubeflow.org/component_ref: '{}'}
+  - name: load-data-2
+    container:
+      args: ['----output-paths', /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def load_data():
+            import pandas as pd
+            df = pd.read_csv('data/metrics.csv')
+            df = df[['time_stamp', 'value']]
+            df['time_stamp'] = pd.to_datetime(df['time_stamp'])
+            df = df.groupby('time_stamp')['value'].sum()
+            df.to_csv('/mnt/data/df.csv')
+            return '/mnt/data/df.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Load data', description='')
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = load_data(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    outputs:
       parameters:
-        Output:
-          parameterType: NUMBER_DOUBLE
-deploymentSpec:
-  executors:
-    exec-sarima-forecast:
-      container:
-        args:
-        - --executor_input
-        - '{{$}}'
-        - --function_to_execute
-        - sarima_forecast
-        command:
-        - sh
-        - -c
-        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
-          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
-          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.8.0'\
-          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"'  &&\
-          \  python3 -m pip install --quiet --no-warn-script-location 'statsmodels'\
-          \ 'pandas' 'matplotlib' 'scikit-learn' && \"$0\" \"$@\"\n"
-        - sh
-        - -ec
-        - 'program_path=$(mktemp -d)
+      - name: load-data-2-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: load-data-2-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["----output-paths", {"outputPath": "Output"}], "command": ["sh",
+          "-ec", "program_path=$(mktemp)\nprintf \"%s\" \"$0\" > \"$program_path\"\npython3
+          -u \"$program_path\" \"$@\"\n", "def load_data():\n    import pandas as
+          pd\n    df = pd.read_csv(''data/metrics.csv'')\n    df = df[[''time_stamp'',
+          ''value'']]\n    df[''time_stamp''] = pd.to_datetime(df[''time_stamp''])\n    df
+          = df.groupby(''time_stamp'')[''value''].sum()\n    df.to_csv(''/mnt/data/df.csv'')\n    return
+          ''/mnt/data/df.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Load
+          data'', description='''')\n_parser.add_argument(\"----output-paths\", dest=\"_output_paths\",
+          type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = load_data(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "name": "Load data", "outputs": [{"name": "Output",
+          "type": "String"}]}', pipelines.kubeflow.org/component_ref: '{}'}
+  - name: make-predictions
+    container:
+      args: [--model-path, '{{inputs.parameters.train-sarima-model-Output}}', --data-path,
+        '{{inputs.parameters.stl-decompose-Output}}', '----output-paths', /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def make_predictions(model_path, data_path):
+            import pandas as pd
+            from statsmodels.tsa.statespace.sarimax import SARIMAXResults
+            model = SARIMAXResults.load(model_path)
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            predictions = model.get_forecast(steps=20).predicted_mean
+            predictions.to_csv('/mnt/data/predictions.csv')
+            return '/mnt/data/predictions.csv'
 
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
 
-          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Make predictions', description='')
+        _parser.add_argument("--model-path", dest="model_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
 
-          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+        _outputs = make_predictions(**_parsed_args)
 
-          '
-        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
-          \ *\n\ndef sarima_forecast(data: str) -> Output[float]:\n    # Load data\n\
-          \    df = pd.read_csv('data/metrics.csv', parse_dates=['time_stamp'])\n\
-          \    df.set_index('time_stamp', inplace=True)\n\n    # Perform SARIMA forecasting\n\
-          \    model = SARIMAX(df['value'], order=(1, 1, 1), seasonal_order=(1, 1,\
-          \ 0, 24))\n    sarima_fit = model.fit(disp=False)\n    forecast = sarima_fit.forecast(steps=24)\
-          \  # Adjust steps as needed\n\n    # Calculate RMSE\n    actual = df['value'][-24:].values\
-          \  # Assuming forecasting last 24 hours\n    rmse = np.sqrt(mean_squared_error(actual,\
-          \ forecast))\n\n    # Plotting (optional)\n    plt.figure(figsize=(12, 6))\n\
-          \    plt.plot(df.index[-24:], actual, label='Actual')\n    plt.plot(df.index[-24:],\
-          \ forecast, label='Forecast')\n    plt.title('SARIMA Forecast')\n    plt.xlabel('Time')\n\
-          \    plt.ylabel('Value')\n    plt.legend()\n    plt.savefig('/mnt/sarima_forecast_plot.png')\
-          \  # Save plot to file\n\n    # Output RMSE as a float\n    return rmse\n\
-          \n"
-        image: python:3.12.0
-pipelineInfo:
-  description: Pipeline to perform SARIMA forecasting
-  name: sarima-forecasting-pipeline
-root:
-  dag:
-    tasks:
-      sarima-forecast:
-        cachingOptions:
-          enableCache: true
-        componentRef:
-          name: comp-sarima-forecast
-        inputs:
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: stl-decompose-Output}
+      - {name: train-sarima-model-Output}
+    outputs:
+      artifacts:
+      - {name: make-predictions-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--model-path", {"inputValue": "model_path"}, "--data-path", {"inputValue":
+          "data_path"}, "----output-paths", {"outputPath": "Output"}], "command":
+          ["sh", "-ec", "program_path=$(mktemp)\nprintf \"%s\" \"$0\" > \"$program_path\"\npython3
+          -u \"$program_path\" \"$@\"\n", "def make_predictions(model_path, data_path):\n    import
+          pandas as pd\n    from statsmodels.tsa.statespace.sarimax import SARIMAXResults\n    model
+          = SARIMAXResults.load(model_path)\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    predictions = model.get_forecast(steps=20).predicted_mean\n    predictions.to_csv(''/mnt/data/predictions.csv'')\n    return
+          ''/mnt/data/predictions.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Make
+          predictions'', description='''')\n_parser.add_argument(\"--model-path\",
+          dest=\"model_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"--data-path\",
+          dest=\"data_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = make_predictions(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "model_path", "type": "String"},
+          {"name": "data_path", "type": "String"}], "name": "Make predictions", "outputs":
+          [{"name": "Output", "type": "String"}]}', pipelines.kubeflow.org/component_ref: '{}',
+        pipelines.kubeflow.org/arguments.parameters: '{"data_path": "{{inputs.parameters.stl-decompose-Output}}",
+          "model_path": "{{inputs.parameters.train-sarima-model-Output}}"}'}
+  - name: make-predictions-2
+    container:
+      args: [--model-path, '{{inputs.parameters.train-sarima-model-2-Output}}', --data-path,
+        '{{inputs.parameters.stl-decompose-2-Output}}', '----output-paths', /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def make_predictions(model_path, data_path):
+            import pandas as pd
+            from statsmodels.tsa.statespace.sarimax import SARIMAXResults
+            model = SARIMAXResults.load(model_path)
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            predictions = model.get_forecast(steps=20).predicted_mean
+            predictions.to_csv('/mnt/data/predictions.csv')
+            return '/mnt/data/predictions.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Make predictions', description='')
+        _parser.add_argument("--model-path", dest="model_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = make_predictions(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: stl-decompose-2-Output}
+      - {name: train-sarima-model-2-Output}
+    outputs:
+      artifacts:
+      - {name: make-predictions-2-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--model-path", {"inputValue": "model_path"}, "--data-path", {"inputValue":
+          "data_path"}, "----output-paths", {"outputPath": "Output"}], "command":
+          ["sh", "-ec", "program_path=$(mktemp)\nprintf \"%s\" \"$0\" > \"$program_path\"\npython3
+          -u \"$program_path\" \"$@\"\n", "def make_predictions(model_path, data_path):\n    import
+          pandas as pd\n    from statsmodels.tsa.statespace.sarimax import SARIMAXResults\n    model
+          = SARIMAXResults.load(model_path)\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    predictions = model.get_forecast(steps=20).predicted_mean\n    predictions.to_csv(''/mnt/data/predictions.csv'')\n    return
+          ''/mnt/data/predictions.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Make
+          predictions'', description='''')\n_parser.add_argument(\"--model-path\",
+          dest=\"model_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"--data-path\",
+          dest=\"data_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = make_predictions(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "model_path", "type": "String"},
+          {"name": "data_path", "type": "String"}], "name": "Make predictions", "outputs":
+          [{"name": "Output", "type": "String"}]}', pipelines.kubeflow.org/component_ref: '{}',
+        pipelines.kubeflow.org/arguments.parameters: '{"data_path": "{{inputs.parameters.stl-decompose-2-Output}}",
+          "model_path": "{{inputs.parameters.train-sarima-model-2-Output}}"}'}
+  - name: preprocess-data
+    container:
+      args: [--data-path, '{{inputs.parameters.load-data-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def preprocess_data(data_path):
+            import pandas as pd
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            df_diff = df.diff().dropna()
+            df_diff.to_csv('/mnt/data/df_diff.csv')
+            return '/mnt/data/df_diff.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Preprocess data', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = preprocess_data(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: load-data-Output}
+    outputs:
+      parameters:
+      - name: preprocess-data-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: preprocess-data-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def preprocess_data(data_path):\n    import pandas as pd\n    df = pd.read_csv(data_path,
+          index_col=''time_stamp'', parse_dates=True)\n    df_diff = df.diff().dropna()\n    df_diff.to_csv(''/mnt/data/df_diff.csv'')\n    return
+          ''/mnt/data/df_diff.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Preprocess
+          data'', description='''')\n_parser.add_argument(\"--data-path\", dest=\"data_path\",
+          type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = preprocess_data(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Preprocess data", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.load-data-Output}}"}'}
+  - name: preprocess-data-2
+    container:
+      args: [--data-path, '{{inputs.parameters.load-data-2-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def preprocess_data(data_path):
+            import pandas as pd
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            df_diff = df.diff().dropna()
+            df_diff.to_csv('/mnt/data/df_diff.csv')
+            return '/mnt/data/df_diff.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Preprocess data', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = preprocess_data(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: load-data-2-Output}
+    outputs:
+      parameters:
+      - name: preprocess-data-2-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: preprocess-data-2-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def preprocess_data(data_path):\n    import pandas as pd\n    df = pd.read_csv(data_path,
+          index_col=''time_stamp'', parse_dates=True)\n    df_diff = df.diff().dropna()\n    df_diff.to_csv(''/mnt/data/df_diff.csv'')\n    return
+          ''/mnt/data/df_diff.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Preprocess
+          data'', description='''')\n_parser.add_argument(\"--data-path\", dest=\"data_path\",
+          type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = preprocess_data(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Preprocess data", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.load-data-2-Output}}"}'}
+  - name: sarima-pipeline
+    dag:
+      tasks:
+      - {name: load-data, template: load-data}
+      - {name: load-data-2, template: load-data-2}
+      - name: make-predictions
+        template: make-predictions
+        dependencies: [stl-decompose, train-sarima-model]
+        arguments:
           parameters:
-            data:
-              runtimeValue:
-                constant: data/metrics.csv
-        taskInfo:
-          name: sarima-forecast
-  inputDefinitions:
-    parameters:
-      data_path:
-        parameterType: STRING
-schemaVersion: 2.1.0
-sdkVersion: kfp-2.8.0
+          - {name: stl-decompose-Output, value: '{{tasks.stl-decompose.outputs.parameters.stl-decompose-Output}}'}
+          - {name: train-sarima-model-Output, value: '{{tasks.train-sarima-model.outputs.parameters.train-sarima-model-Output}}'}
+      - name: make-predictions-2
+        template: make-predictions-2
+        dependencies: [stl-decompose-2, train-sarima-model-2]
+        arguments:
+          parameters:
+          - {name: stl-decompose-2-Output, value: '{{tasks.stl-decompose-2.outputs.parameters.stl-decompose-2-Output}}'}
+          - {name: train-sarima-model-2-Output, value: '{{tasks.train-sarima-model-2.outputs.parameters.train-sarima-model-2-Output}}'}
+      - name: preprocess-data
+        template: preprocess-data
+        dependencies: [load-data]
+        arguments:
+          parameters:
+          - {name: load-data-Output, value: '{{tasks.load-data.outputs.parameters.load-data-Output}}'}
+      - name: preprocess-data-2
+        template: preprocess-data-2
+        dependencies: [load-data-2]
+        arguments:
+          parameters:
+          - {name: load-data-2-Output, value: '{{tasks.load-data-2.outputs.parameters.load-data-2-Output}}'}
+      - name: stl-decompose
+        template: stl-decompose
+        dependencies: [preprocess-data]
+        arguments:
+          parameters:
+          - {name: preprocess-data-Output, value: '{{tasks.preprocess-data.outputs.parameters.preprocess-data-Output}}'}
+      - name: stl-decompose-2
+        template: stl-decompose-2
+        dependencies: [preprocess-data-2]
+        arguments:
+          parameters:
+          - {name: preprocess-data-2-Output, value: '{{tasks.preprocess-data-2.outputs.parameters.preprocess-data-2-Output}}'}
+      - name: train-sarima-model
+        template: train-sarima-model
+        dependencies: [stl-decompose]
+        arguments:
+          parameters:
+          - {name: stl-decompose-Output, value: '{{tasks.stl-decompose.outputs.parameters.stl-decompose-Output}}'}
+      - name: train-sarima-model-2
+        template: train-sarima-model-2
+        dependencies: [stl-decompose-2]
+        arguments:
+          parameters:
+          - {name: stl-decompose-2-Output, value: '{{tasks.stl-decompose-2.outputs.parameters.stl-decompose-2-Output}}'}
+  - name: stl-decompose
+    container:
+      args: [--data-path, '{{inputs.parameters.preprocess-data-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def stl_decompose(data_path):
+            import pandas as pd
+            from statsmodels.tsa.seasonal import seasonal_decompose
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            result_stl = seasonal_decompose(df, model='additive')
+            trend = result_stl.trend.dropna()
+            trend.to_csv('/mnt/data/trend.csv')
+            return '/mnt/data/trend.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Stl decompose', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = stl_decompose(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: preprocess-data-Output}
+    outputs:
+      parameters:
+      - name: stl-decompose-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: stl-decompose-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def stl_decompose(data_path):\n    import pandas as pd\n    from statsmodels.tsa.seasonal
+          import seasonal_decompose\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    result_stl = seasonal_decompose(df, model=''additive'')\n    trend
+          = result_stl.trend.dropna()\n    trend.to_csv(''/mnt/data/trend.csv'')\n    return
+          ''/mnt/data/trend.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Stl
+          decompose'', description='''')\n_parser.add_argument(\"--data-path\", dest=\"data_path\",
+          type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = stl_decompose(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Stl decompose", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.preprocess-data-Output}}"}'}
+  - name: stl-decompose-2
+    container:
+      args: [--data-path, '{{inputs.parameters.preprocess-data-2-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def stl_decompose(data_path):
+            import pandas as pd
+            from statsmodels.tsa.seasonal import seasonal_decompose
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            result_stl = seasonal_decompose(df, model='additive')
+            trend = result_stl.trend.dropna()
+            trend.to_csv('/mnt/data/trend.csv')
+            return '/mnt/data/trend.csv'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Stl decompose', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = stl_decompose(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: preprocess-data-2-Output}
+    outputs:
+      parameters:
+      - name: stl-decompose-2-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: stl-decompose-2-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def stl_decompose(data_path):\n    import pandas as pd\n    from statsmodels.tsa.seasonal
+          import seasonal_decompose\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    result_stl = seasonal_decompose(df, model=''additive'')\n    trend
+          = result_stl.trend.dropna()\n    trend.to_csv(''/mnt/data/trend.csv'')\n    return
+          ''/mnt/data/trend.csv''\n\ndef _serialize_str(str_value: str) -> str:\n    if
+          not isinstance(str_value, str):\n        raise TypeError(''Value \"{}\"
+          has type \"{}\" instead of str.''.format(\n            str(str_value), str(type(str_value))))\n    return
+          str_value\n\nimport argparse\n_parser = argparse.ArgumentParser(prog=''Stl
+          decompose'', description='''')\n_parser.add_argument(\"--data-path\", dest=\"data_path\",
+          type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = stl_decompose(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Stl decompose", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.preprocess-data-2-Output}}"}'}
+  - name: train-sarima-model
+    container:
+      args: [--data-path, '{{inputs.parameters.stl-decompose-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def train_sarima_model(data_path):
+            import pandas as pd
+            from statsmodels.tsa.statespace.sarimax import SARIMAX
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            model = SARIMAX(df, order=(3, 1, 0), seasonal_order=(3, 1, 0, 7))
+            result = model.fit()
+            result.save('/mnt/data/sarima_model.pkl')
+            return '/mnt/data/sarima_model.pkl'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Train sarima model', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = train_sarima_model(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: stl-decompose-Output}
+    outputs:
+      parameters:
+      - name: train-sarima-model-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: train-sarima-model-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def train_sarima_model(data_path):\n    import pandas as pd\n    from statsmodels.tsa.statespace.sarimax
+          import SARIMAX\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    model = SARIMAX(df, order=(3, 1, 0), seasonal_order=(3,
+          1, 0, 7))\n    result = model.fit()\n    result.save(''/mnt/data/sarima_model.pkl'')\n    return
+          ''/mnt/data/sarima_model.pkl''\n\ndef _serialize_str(str_value: str) ->
+          str:\n    if not isinstance(str_value, str):\n        raise TypeError(''Value
+          \"{}\" has type \"{}\" instead of str.''.format(\n            str(str_value),
+          str(type(str_value))))\n    return str_value\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Train sarima model'', description='''')\n_parser.add_argument(\"--data-path\",
+          dest=\"data_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = train_sarima_model(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Train sarima model", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.stl-decompose-Output}}"}'}
+  - name: train-sarima-model-2
+    container:
+      args: [--data-path, '{{inputs.parameters.stl-decompose-2-Output}}', '----output-paths',
+        /tmp/outputs/Output/data]
+      command:
+      - sh
+      - -ec
+      - |
+        program_path=$(mktemp)
+        printf "%s" "$0" > "$program_path"
+        python3 -u "$program_path" "$@"
+      - |
+        def train_sarima_model(data_path):
+            import pandas as pd
+            from statsmodels.tsa.statespace.sarimax import SARIMAX
+            df = pd.read_csv(data_path, index_col='time_stamp', parse_dates=True)
+            model = SARIMAX(df, order=(3, 1, 0), seasonal_order=(3, 1, 0, 7))
+            result = model.fit()
+            result.save('/mnt/data/sarima_model.pkl')
+            return '/mnt/data/sarima_model.pkl'
+
+        def _serialize_str(str_value: str) -> str:
+            if not isinstance(str_value, str):
+                raise TypeError('Value "{}" has type "{}" instead of str.'.format(
+                    str(str_value), str(type(str_value))))
+            return str_value
+
+        import argparse
+        _parser = argparse.ArgumentParser(prog='Train sarima model', description='')
+        _parser.add_argument("--data-path", dest="data_path", type=str, required=True, default=argparse.SUPPRESS)
+        _parser.add_argument("----output-paths", dest="_output_paths", type=str, nargs=1)
+        _parsed_args = vars(_parser.parse_args())
+        _output_files = _parsed_args.pop("_output_paths", [])
+
+        _outputs = train_sarima_model(**_parsed_args)
+
+        _outputs = [_outputs]
+
+        _output_serializers = [
+            _serialize_str,
+
+        ]
+
+        import os
+        for idx, output_file in enumerate(_output_files):
+            try:
+                os.makedirs(os.path.dirname(output_file))
+            except OSError:
+                pass
+            with open(output_file, 'w') as f:
+                f.write(_output_serializers[idx](_outputs[idx]))
+      image: python:3.7
+    inputs:
+      parameters:
+      - {name: stl-decompose-2-Output}
+    outputs:
+      parameters:
+      - name: train-sarima-model-2-Output
+        valueFrom: {path: /tmp/outputs/Output/data}
+      artifacts:
+      - {name: train-sarima-model-2-Output, path: /tmp/outputs/Output/data}
+    metadata:
+      labels:
+        pipelines.kubeflow.org/kfp_sdk_version: 1.8.22
+        pipelines.kubeflow.org/pipeline-sdk-type: kfp
+        pipelines.kubeflow.org/enable_caching: "true"
+      annotations: {pipelines.kubeflow.org/component_spec: '{"implementation": {"container":
+          {"args": ["--data-path", {"inputValue": "data_path"}, "----output-paths",
+          {"outputPath": "Output"}], "command": ["sh", "-ec", "program_path=$(mktemp)\nprintf
+          \"%s\" \"$0\" > \"$program_path\"\npython3 -u \"$program_path\" \"$@\"\n",
+          "def train_sarima_model(data_path):\n    import pandas as pd\n    from statsmodels.tsa.statespace.sarimax
+          import SARIMAX\n    df = pd.read_csv(data_path, index_col=''time_stamp'',
+          parse_dates=True)\n    model = SARIMAX(df, order=(3, 1, 0), seasonal_order=(3,
+          1, 0, 7))\n    result = model.fit()\n    result.save(''/mnt/data/sarima_model.pkl'')\n    return
+          ''/mnt/data/sarima_model.pkl''\n\ndef _serialize_str(str_value: str) ->
+          str:\n    if not isinstance(str_value, str):\n        raise TypeError(''Value
+          \"{}\" has type \"{}\" instead of str.''.format(\n            str(str_value),
+          str(type(str_value))))\n    return str_value\n\nimport argparse\n_parser
+          = argparse.ArgumentParser(prog=''Train sarima model'', description='''')\n_parser.add_argument(\"--data-path\",
+          dest=\"data_path\", type=str, required=True, default=argparse.SUPPRESS)\n_parser.add_argument(\"----output-paths\",
+          dest=\"_output_paths\", type=str, nargs=1)\n_parsed_args = vars(_parser.parse_args())\n_output_files
+          = _parsed_args.pop(\"_output_paths\", [])\n\n_outputs = train_sarima_model(**_parsed_args)\n\n_outputs
+          = [_outputs]\n\n_output_serializers = [\n    _serialize_str,\n\n]\n\nimport
+          os\nfor idx, output_file in enumerate(_output_files):\n    try:\n        os.makedirs(os.path.dirname(output_file))\n    except
+          OSError:\n        pass\n    with open(output_file, ''w'') as f:\n        f.write(_output_serializers[idx](_outputs[idx]))\n"],
+          "image": "python:3.7"}}, "inputs": [{"name": "data_path", "type": "String"}],
+          "name": "Train sarima model", "outputs": [{"name": "Output", "type": "String"}]}',
+        pipelines.kubeflow.org/component_ref: '{}', pipelines.kubeflow.org/arguments.parameters: '{"data_path":
+          "{{inputs.parameters.stl-decompose-2-Output}}"}'}
+  arguments:
+    parameters: []
+  serviceAccountName: pipeline-runner
