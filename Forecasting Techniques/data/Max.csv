@@ -1,0 +1,722 @@
+collection_id,vm_id,name,value,aggregation,time_stamp
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,2387709.68,Maximum,2024-06-17 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6210715648.0,Maximum,2024-06-17 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5858394112.0,Maximum,2024-06-17 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-17 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-17 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,6311515.31,Maximum,2024-06-17 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4612430.59,Maximum,2024-06-17 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5852102656.0,Maximum,2024-06-17 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4423192.11,Maximum,2024-06-17 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-17 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,7.59,Maximum,2024-06-17 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5873074176.0,Maximum,2024-06-17 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4763499.86,Maximum,2024-06-17 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-17 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.64,Maximum,2024-06-18 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-18 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5866782720.0,Maximum,2024-06-18 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.46,Maximum,2024-06-18 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1540143.18,Maximum,2024-06-18 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-18 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5496869.82,Maximum,2024-06-18 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-18 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1343611.65,Maximum,2024-06-18 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6214909952.0,Maximum,2024-06-18 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6201278464.0,Maximum,2024-06-18 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6210715648.0,Maximum,2024-06-18 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.32,Maximum,2024-06-18 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6165626880.0,Maximum,2024-06-18 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6199181312.0,Maximum,2024-06-18 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4604289.57,Maximum,2024-06-18 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-18 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6204424192.0,Maximum,2024-06-18 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1167558.33,Maximum,2024-06-18 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6209667072.0,Maximum,2024-06-18 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.05,Maximum,2024-06-18 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-18 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-18 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4731049.93,Maximum,2024-06-18 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-06-19 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.46,Maximum,2024-06-19 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4493196.93,Maximum,2024-06-19 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-19 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-19 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-19 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-19 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-19 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.48,Maximum,2024-06-19 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1118358.24,Maximum,2024-06-19 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-19 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-19 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-19 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1540003.84,Maximum,2024-06-19 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1126503.78,Maximum,2024-06-19 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5798625280.0,Maximum,2024-06-19 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-19 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5859442688.0,Maximum,2024-06-19 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.7,Maximum,2024-06-19 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1564728.66,Maximum,2024-06-19 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6212812800.0,Maximum,2024-06-19 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-19 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5854199808.0,Maximum,2024-06-19 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6200229888.0,Maximum,2024-06-19 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.35,Maximum,2024-06-20 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1102002.06,Maximum,2024-06-20 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1699882.91,Maximum,2024-06-20 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-20 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6194987008.0,Maximum,2024-06-20 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6212812800.0,Maximum,2024-06-20 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-20 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4464446.16,Maximum,2024-06-20 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5866782720.0,Maximum,2024-06-20 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6222249984.0,Maximum,2024-06-20 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,131067.64,Maximum,2024-06-20 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5865734144.0,Maximum,2024-06-20 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6215958528.0,Maximum,2024-06-20 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-20 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1200350.62,Maximum,2024-06-20 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6158286848.0,Maximum,2024-06-20 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5853151232.0,Maximum,2024-06-20 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5847908352.0,Maximum,2024-06-20 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-20 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5875171328.0,Maximum,2024-06-20 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-20 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-20 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.38,Maximum,2024-06-20 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-20 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,987249.1,Maximum,2024-06-21 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1454315.12,Maximum,2024-06-21 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.58,Maximum,2024-06-21 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1134844.67,Maximum,2024-06-21 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-06-21 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-21 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5734743.72,Maximum,2024-06-21 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-21 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4870102.49,Maximum,2024-06-21 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4726984.57,Maximum,2024-06-21 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1163284.0,Maximum,2024-06-21 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.33,Maximum,2024-06-21 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1314752.34,Maximum,2024-06-21 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6205472768.0,Maximum,2024-06-21 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5837422592.0,Maximum,2024-06-21 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6212812800.0,Maximum,2024-06-21 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-21 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4608276.32,Maximum,2024-06-21 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-21 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.31,Maximum,2024-06-21 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5854199808.0,Maximum,2024-06-21 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5840568320.0,Maximum,2024-06-21 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.32,Maximum,2024-06-21 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5844762624.0,Maximum,2024-06-21 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.46,Maximum,2024-06-22 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5215332.33,Maximum,2024-06-22 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-22 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,6893814.91,Maximum,2024-06-22 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6213861376.0,Maximum,2024-06-22 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5148214.91,Maximum,2024-06-22 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-22 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5426814.09,Maximum,2024-06-22 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.97,Maximum,2024-06-22 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.22,Maximum,2024-06-22 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6225395712.0,Maximum,2024-06-22 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6205472768.0,Maximum,2024-06-22 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1728497.27,Maximum,2024-06-22 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-22 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-22 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.35,Maximum,2024-06-22 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1392871.23,Maximum,2024-06-22 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.15,Maximum,2024-06-22 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4771698.65,Maximum,2024-06-22 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.48,Maximum,2024-06-22 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4747378.86,Maximum,2024-06-22 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5398687.51,Maximum,2024-06-22 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-22 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-22 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-23 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.15,Maximum,2024-06-23 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5855248384.0,Maximum,2024-06-23 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.3,Maximum,2024-06-23 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.07,Maximum,2024-06-23 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-23 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4431971.09,Maximum,2024-06-23 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-23 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-23 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,277267029.73,Maximum,2024-06-23 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.71,Maximum,2024-06-23 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1388626.28,Maximum,2024-06-23 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.13,Maximum,2024-06-23 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6217007104.0,Maximum,2024-06-23 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4702226.2,Maximum,2024-06-23 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-23 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-23 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.34,Maximum,2024-06-23 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1658872.64,Maximum,2024-06-23 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,8187842.03,Maximum,2024-06-23 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-06-23 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-23 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4904532.1,Maximum,2024-06-23 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4769323.14,Maximum,2024-06-23 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5848956928.0,Maximum,2024-06-24 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-24 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-24 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-24 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.3,Maximum,2024-06-24 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,8514766.35,Maximum,2024-06-24 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.38,Maximum,2024-06-24 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4194063.44,Maximum,2024-06-24 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.47,Maximum,2024-06-24 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-06-24 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-24 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1175688.8,Maximum,2024-06-24 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-24 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.29,Maximum,2024-06-24 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.56,Maximum,2024-06-24 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.27,Maximum,2024-06-24 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-24 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6198132736.0,Maximum,2024-06-24 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-24 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-24 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.25,Maximum,2024-06-24 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-24 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5864685568.0,Maximum,2024-06-24 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-24 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,7.6,Maximum,2024-06-25 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6182404096.0,Maximum,2024-06-25 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.36,Maximum,2024-06-25 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.35,Maximum,2024-06-25 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5246878.63,Maximum,2024-06-25 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.57,Maximum,2024-06-25 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6210715648.0,Maximum,2024-06-25 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.23,Maximum,2024-06-25 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1212511.78,Maximum,2024-06-25 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1339347.69,Maximum,2024-06-25 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.54,Maximum,2024-06-25 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5837422592.0,Maximum,2024-06-25 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.34,Maximum,2024-06-25 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.31,Maximum,2024-06-25 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5348507.39,Maximum,2024-06-25 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,2268848.06,Maximum,2024-06-25 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6201278464.0,Maximum,2024-06-25 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5645533184.0,Maximum,2024-06-25 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.72,Maximum,2024-06-25 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.25,Maximum,2024-06-25 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5599024.14,Maximum,2024-06-25 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-25 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.67,Maximum,2024-06-25 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5636096000.0,Maximum,2024-06-25 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1138777.56,Maximum,2024-06-26 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-26 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4607770.71,Maximum,2024-06-26 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5629804544.0,Maximum,2024-06-26 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.81,Maximum,2024-06-26 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.58,Maximum,2024-06-26 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.16,Maximum,2024-06-26 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4670741.75,Maximum,2024-06-26 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1851700.85,Maximum,2024-06-26 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6146752512.0,Maximum,2024-06-26 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-26 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.47,Maximum,2024-06-26 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.42,Maximum,2024-06-26 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5850005504.0,Maximum,2024-06-26 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.97,Maximum,2024-06-26 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.64,Maximum,2024-06-26 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-26 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.67,Maximum,2024-06-26 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4488806.92,Maximum,2024-06-26 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-26 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1425553.6,Maximum,2024-06-26 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1048651.97,Maximum,2024-06-26 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6213861376.0,Maximum,2024-06-26 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1347504.04,Maximum,2024-06-26 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5842665472.0,Maximum,2024-06-27 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1130485.67,Maximum,2024-06-27 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4488895.34,Maximum,2024-06-27 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-27 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.27,Maximum,2024-06-27 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6196035584.0,Maximum,2024-06-27 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.54,Maximum,2024-06-27 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6214909952.0,Maximum,2024-06-27 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5856296960.0,Maximum,2024-06-27 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1179861.58,Maximum,2024-06-27 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,10751659.6,Maximum,2024-06-27 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-27 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6159335424.0,Maximum,2024-06-27 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4702011.42,Maximum,2024-06-27 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5844762624.0,Maximum,2024-06-27 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-27 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-27 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5029962.09,Maximum,2024-06-27 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,19.87,Maximum,2024-06-27 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1470682.48,Maximum,2024-06-27 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-27 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-27 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-27 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5856296960.0,Maximum,2024-06-27 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-28 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5193952.91,Maximum,2024-06-28 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,6.23,Maximum,2024-06-28 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6219104256.0,Maximum,2024-06-28 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-28 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5840568320.0,Maximum,2024-06-28 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1183954.69,Maximum,2024-06-28 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6209667072.0,Maximum,2024-06-28 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6202327040.0,Maximum,2024-06-28 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6205472768.0,Maximum,2024-06-28 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.37,Maximum,2024-06-28 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5857345536.0,Maximum,2024-06-28 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4800824.27,Maximum,2024-06-28 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5861539840.0,Maximum,2024-06-28 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1396829.47,Maximum,2024-06-28 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-28 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1278097.46,Maximum,2024-06-28 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.65,Maximum,2024-06-28 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-28 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-29 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1282187.04,Maximum,2024-06-29 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.44,Maximum,2024-06-29 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-29 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-29 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-29 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-29 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6205472768.0,Maximum,2024-06-29 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-29 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5847908352.0,Maximum,2024-06-29 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-29 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1671363.97,Maximum,2024-06-29 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1122371.96,Maximum,2024-06-29 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.93,Maximum,2024-06-29 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.91,Maximum,2024-06-29 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.85,Maximum,2024-06-29 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4261026.91,Maximum,2024-06-29 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-06-29 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5118642.65,Maximum,2024-06-29 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-29 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5147971.18,Maximum,2024-06-29 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4730555.65,Maximum,2024-06-29 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1282208.0,Maximum,2024-06-29 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-29 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.12,Maximum,2024-06-30 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-30 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-30 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1462255.93,Maximum,2024-06-30 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-06-30 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.22,Maximum,2024-06-30 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6218055680.0,Maximum,2024-06-30 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6225395712.0,Maximum,2024-06-30 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.35,Maximum,2024-06-30 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6226444288.0,Maximum,2024-06-30 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5488610.73,Maximum,2024-06-30 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1351790.09,Maximum,2024-06-30 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.36,Maximum,2024-06-30 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-06-30 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5132527.8,Maximum,2024-06-30 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.31,Maximum,2024-06-30 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6214909952.0,Maximum,2024-06-30 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5778702336.0,Maximum,2024-06-30 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5786042368.0,Maximum,2024-06-30 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6210715648.0,Maximum,2024-06-30 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-06-30 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.96,Maximum,2024-06-30 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.1,Maximum,2024-06-30 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4291923.42,Maximum,2024-06-30 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5623559.16,Maximum,2024-07-01 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.91,Maximum,2024-07-01 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-01 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1634509.14,Maximum,2024-07-01 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.7,Maximum,2024-07-01 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5689380.6,Maximum,2024-07-01 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.19,Maximum,2024-07-01 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6213861376.0,Maximum,2024-07-01 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-01 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1134634.37,Maximum,2024-07-01 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5862588416.0,Maximum,2024-07-01 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.64,Maximum,2024-07-01 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5832179712.0,Maximum,2024-07-01 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5295670.02,Maximum,2024-07-01 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4690024.78,Maximum,2024-07-01 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.55,Maximum,2024-07-01 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4689751.93,Maximum,2024-07-01 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-01 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6198132736.0,Maximum,2024-07-02 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-02 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-02 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4903279.63,Maximum,2024-07-02 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5841616896.0,Maximum,2024-07-02 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1413346.29,Maximum,2024-07-02 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-02 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6207569920.0,Maximum,2024-07-02 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.59,Maximum,2024-07-02 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-02 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1044609.33,Maximum,2024-07-02 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5843714048.0,Maximum,2024-07-02 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4690297.23,Maximum,2024-07-02 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6208618496.0,Maximum,2024-07-02 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6198132736.0,Maximum,2024-07-02 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6218055680.0,Maximum,2024-07-02 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5846859776.0,Maximum,2024-07-02 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4849862.92,Maximum,2024-07-02 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.55,Maximum,2024-07-02 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5857345536.0,Maximum,2024-07-02 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.28,Maximum,2024-07-02 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4276137.19,Maximum,2024-07-02 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-02 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,16.24,Maximum,2024-07-02 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,2019333.32,Maximum,2024-07-03 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1101981.52,Maximum,2024-07-03 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4677748.63,Maximum,2024-07-03 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5857345536.0,Maximum,2024-07-03 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6213861376.0,Maximum,2024-07-03 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-03 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4571286.0,Maximum,2024-07-03 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5214461.98,Maximum,2024-07-03 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,19352098.21,Maximum,2024-07-03 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-07-03 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.31,Maximum,2024-07-03 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.42,Maximum,2024-07-03 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5426563.47,Maximum,2024-07-03 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5855248384.0,Maximum,2024-07-03 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-07-03 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-03 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1998535.0,Maximum,2024-07-03 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6200229888.0,Maximum,2024-07-03 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1355801.8,Maximum,2024-07-03 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.21,Maximum,2024-07-03 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.49,Maximum,2024-07-03 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4488909.78,Maximum,2024-07-03 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1015992.58,Maximum,2024-07-03 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1212360.91,Maximum,2024-07-03 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5647505.64,Maximum,2024-07-04 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-04 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4612240.67,Maximum,2024-07-04 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.67,Maximum,2024-07-04 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.1,Maximum,2024-07-04 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6214909952.0,Maximum,2024-07-04 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.49,Maximum,2024-07-04 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4473292.53,Maximum,2024-07-04 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-04 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-04 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-04 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.22,Maximum,2024-07-04 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1175816.9,Maximum,2024-07-04 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1605893.48,Maximum,2024-07-04 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1544157.67,Maximum,2024-07-04 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-04 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.53,Maximum,2024-07-04 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5546595.97,Maximum,2024-07-04 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-04 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.51,Maximum,2024-07-04 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-04 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5858394112.0,Maximum,2024-07-04 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6200229888.0,Maximum,2024-07-04 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4640662.84,Maximum,2024-07-04 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4726132.78,Maximum,2024-07-05 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.52,Maximum,2024-07-05 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-07-05 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.57,Maximum,2024-07-05 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.41,Maximum,2024-07-05 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.43,Maximum,2024-07-05 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.68,Maximum,2024-07-05 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4776079.13,Maximum,2024-07-05 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6207569920.0,Maximum,2024-07-05 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-05 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.75,Maximum,2024-07-05 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4804472.13,Maximum,2024-07-05 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-05 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-05 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.33,Maximum,2024-07-05 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-05 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-05 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.2,Maximum,2024-07-05 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6213861376.0,Maximum,2024-07-05 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4358169.03,Maximum,2024-07-05 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1061033.6,Maximum,2024-07-05 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-05 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.24,Maximum,2024-07-05 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5834276864.0,Maximum,2024-07-05 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.14,Maximum,2024-07-06 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.23,Maximum,2024-07-06 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5316438.3,Maximum,2024-07-06 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4424079.19,Maximum,2024-07-06 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5847908352.0,Maximum,2024-07-06 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4337403.12,Maximum,2024-07-06 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-06 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.57,Maximum,2024-07-06 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-06 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6208618496.0,Maximum,2024-07-06 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1122384.88,Maximum,2024-07-06 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4730170.58,Maximum,2024-07-06 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5825888256.0,Maximum,2024-07-06 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-06 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6204424192.0,Maximum,2024-07-06 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.34,Maximum,2024-07-06 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.55,Maximum,2024-07-06 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1528049.78,Maximum,2024-07-06 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-06 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6170869760.0,Maximum,2024-07-06 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,2510421.33,Maximum,2024-07-06 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.64,Maximum,2024-07-06 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,155876033.9,Maximum,2024-07-06 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-06 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-07 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5870977024.0,Maximum,2024-07-07 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.35,Maximum,2024-07-07 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,4095.72,Maximum,2024-07-07 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.56,Maximum,2024-07-07 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6217007104.0,Maximum,2024-07-07 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1060979.12,Maximum,2024-07-07 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.35,Maximum,2024-07-07 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.59,Maximum,2024-07-07 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5840568320.0,Maximum,2024-07-07 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4858009.48,Maximum,2024-07-07 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-07 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,7.07,Maximum,2024-07-07 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.47,Maximum,2024-07-07 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-07 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5852102656.0,Maximum,2024-07-07 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6200229888.0,Maximum,2024-07-07 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.56,Maximum,2024-07-07 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1417443.22,Maximum,2024-07-07 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.99,Maximum,2024-07-07 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.76,Maximum,2024-07-07 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-07 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-07 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-07 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6210715648.0,Maximum,2024-07-08 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-07-08 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1446093.52,Maximum,2024-07-08 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4488880.72,Maximum,2024-07-08 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1159344.64,Maximum,2024-07-08 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1528028.56,Maximum,2024-07-08 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5782896640.0,Maximum,2024-07-08 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6204424192.0,Maximum,2024-07-08 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.33,Maximum,2024-07-08 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4505941.91,Maximum,2024-07-08 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4699424.23,Maximum,2024-07-08 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6221201408.0,Maximum,2024-07-08 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6204424192.0,Maximum,2024-07-08 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-08 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1675119.12,Maximum,2024-07-08 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4087434.29,Maximum,2024-07-08 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-08 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6208618496.0,Maximum,2024-07-08 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1208265.55,Maximum,2024-07-08 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.22,Maximum,2024-07-08 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5845811200.0,Maximum,2024-07-08 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-08 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6226444288.0,Maximum,2024-07-08 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4791751.71,Maximum,2024-07-08 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-09 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5832179712.0,Maximum,2024-07-09 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.25,Maximum,2024-07-09 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4882664.15,Maximum,2024-07-09 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7539261440.0,Maximum,2024-07-09 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,528875.02,Maximum,2024-07-09 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,348644.28,Maximum,2024-07-09 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.23,Maximum,2024-07-09 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,401926.24,Maximum,2024-07-09 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4673561.53,Maximum,2024-07-09 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-09 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-09 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,5128410.97,Maximum,2024-07-09 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7405043712.0,Maximum,2024-07-09 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6214909952.0,Maximum,2024-07-09 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,348652.52,Maximum,2024-07-09 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1712255.96,Maximum,2024-07-09 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-09 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.57,Maximum,2024-07-09 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7418675200.0,Maximum,2024-07-09 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4383229.3,Maximum,2024-07-09 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.9,Maximum,2024-07-09 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-09 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-09 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4559236.86,Maximum,2024-07-10 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,2023271.05,Maximum,2024-07-10 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5852102656.0,Maximum,2024-07-10 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-10 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-10 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-10 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6206521344.0,Maximum,2024-07-10 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.62,Maximum,2024-07-10 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6219104256.0,Maximum,2024-07-10 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7445938176.0,Maximum,2024-07-10 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,385582.67,Maximum,2024-07-10 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5467893.71,Maximum,2024-07-10 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7412383744.0,Maximum,2024-07-10 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-10 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-10 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-10 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.82,Maximum,2024-07-10 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.25,Maximum,2024-07-10 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,3714762.77,Maximum,2024-07-10 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,3960350.02,Maximum,2024-07-10 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-10 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7434403840.0,Maximum,2024-07-10 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5846859776.0,Maximum,2024-07-10 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,385513.64,Maximum,2024-07-10 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-11 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-11 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-11 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-11 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7428112384.0,Maximum,2024-07-11 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7429160960.0,Maximum,2024-07-11 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5834276864.0,Maximum,2024-07-11 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6217007104.0,Maximum,2024-07-11 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,422406.04,Maximum,2024-07-11 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-11 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7407140864.0,Maximum,2024-07-11 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.47,Maximum,2024-07-11 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5848956928.0,Maximum,2024-07-11 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7406092288.0,Maximum,2024-07-11 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-11 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.21,Maximum,2024-07-11 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,352787.84,Maximum,2024-07-11 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-11 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4654147.71,Maximum,2024-07-11 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.35,Maximum,2024-07-11 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-11 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-11 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1294326.7,Maximum,2024-07-11 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.25,Maximum,2024-07-11 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.3,Maximum,2024-07-12 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.32,Maximum,2024-07-12 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.48,Maximum,2024-07-12 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.15,Maximum,2024-07-12 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,4.96,Maximum,2024-07-12 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-12 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-12 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,397789.0,Maximum,2024-07-12 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4918926.21,Maximum,2024-07-12 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7395606528.0,Maximum,2024-07-12 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1175712.54,Maximum,2024-07-12 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-12 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,410157.71,Maximum,2024-07-12 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5848956928.0,Maximum,2024-07-12 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.68,Maximum,2024-07-12 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6197084160.0,Maximum,2024-07-12 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.59,Maximum,2024-07-12 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.2,Maximum,2024-07-12 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,8.0,Maximum,2024-07-12 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1593481.81,Maximum,2024-07-12 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7419723776.0,Maximum,2024-07-12 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-12 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-12 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.24,Maximum,2024-07-12 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-13 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.69,Maximum,2024-07-13 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-13 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5471076.7,Maximum,2024-07-13 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.53,Maximum,2024-07-13 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7405043712.0,Maximum,2024-07-13 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7403995136.0,Maximum,2024-07-13 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,442867.53,Maximum,2024-07-13 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6199181312.0,Maximum,2024-07-13 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6208618496.0,Maximum,2024-07-13 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.22,Maximum,2024-07-13 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6126829568.0,Maximum,2024-07-13 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1605464.2,Maximum,2024-07-13 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-13 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-13 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-13 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7405043712.0,Maximum,2024-07-13 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,520712.66,Maximum,2024-07-13 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,619032.55,Maximum,2024-07-13 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.6,Maximum,2024-07-13 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-13 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-13 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-13 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.23,Maximum,2024-07-13 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-14 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7379877888.0,Maximum,2024-07-14 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.51,Maximum,2024-07-14 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6219104256.0,Maximum,2024-07-14 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7402946560.0,Maximum,2024-07-14 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,929905.22,Maximum,2024-07-14 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-14 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1941604.95,Maximum,2024-07-14 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-14 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.01,Maximum,2024-07-14 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6199181312.0,Maximum,2024-07-14 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,377313.16,Maximum,2024-07-14 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6155141120.0,Maximum,2024-07-14 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-14 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.86,Maximum,2024-07-14 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.24,Maximum,2024-07-14 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5837422592.0,Maximum,2024-07-14 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7407140864.0,Maximum,2024-07-14 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5851054080.0,Maximum,2024-07-14 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-14 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5790236672.0,Maximum,2024-07-14 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,8.09,Maximum,2024-07-14 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-07-14 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,5938711.87,Maximum,2024-07-14 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.72,Maximum,2024-07-15 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5830082560.0,Maximum,2024-07-15 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-15 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,377366.17,Maximum,2024-07-15 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6203375616.0,Maximum,2024-07-15 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-15 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Available Memory Bytes,6199181312.0,Maximum,2024-07-15 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,401940.77,Maximum,2024-07-15 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.51,Maximum,2024-07-15 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7397703680.0,Maximum,2024-07-15 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5848956928.0,Maximum,2024-07-15 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-15 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.74,Maximum,2024-07-15 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-15 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.05,Maximum,2024-07-15 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,4956161.03,Maximum,2024-07-15 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-15 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.36,Maximum,2024-07-15 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-15 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-15 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1372397.37,Maximum,2024-07-15 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.62,Maximum,2024-07-15 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.24,Maximum,2024-07-15 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,414236.83,Maximum,2024-07-15 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-16 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.29,Maximum,2024-07-16 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5854199808.0,Maximum,2024-07-16 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.27,Maximum,2024-07-16 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1147017.96,Maximum,2024-07-16 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-16 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,6.56,Maximum,2024-07-16 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7378829312.0,Maximum,2024-07-16 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-16 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5818548224.0,Maximum,2024-07-16 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.5,Maximum,2024-07-16 10:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-16 11:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Write Bytes,446908.21,Maximum,2024-07-16 12:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4583632.47,Maximum,2024-07-16 13:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4681291.01,Maximum,2024-07-16 14:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7392460800.0,Maximum,2024-07-16 15:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-16 16:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Available Memory Bytes,7399800832.0,Maximum,2024-07-16 17:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.7,Maximum,2024-07-16 18:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Write Bytes,4697635.23,Maximum,2024-07-16 19:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Percentage CPU,0.26,Maximum,2024-07-16 20:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,DIP-K8S/github-runner-01,Disk Read Bytes,0.0,Maximum,2024-07-16 21:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.6,Maximum,2024-07-16 22:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Available Memory Bytes,5839519744.0,Maximum,2024-07-16 23:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1679905.89,Maximum,2024-07-17 00:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-17 01:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.14,Maximum,2024-07-17 02:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1650683.05,Maximum,2024-07-17 03:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.64,Maximum,2024-07-17 04:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Percentage CPU,7.7,Maximum,2024-07-17 05:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Read Bytes,0.0,Maximum,2024-07-17 06:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Disk Write Bytes,1179844.83,Maximum,2024-07-17 07:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-worker,Percentage CPU,5.3,Maximum,2024-07-17 08:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-17 09:00:00
+cf342d1d-2dc2-4647-a3ad-d84e19ffce1d,anton-cka-cks/K8s-cp,Disk Read Bytes,0.0,Maximum,2024-07-17 10:00:00
